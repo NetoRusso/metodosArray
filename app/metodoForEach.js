@@ -6,7 +6,7 @@ function exibirOsLivrosNaTela(listaDeLivros) {
     elementoParaInserirLivros.innerHTML = ''
     listaDeLivros.forEach(livro => {
         // let disponibilidade = verrificarDisponibilidadeDoLivro(livro)
-        let disponibilidade = livro.quantidade > 0 ? 'livro__imagens' : 'livro__imagens indisponivel';
+        let disponibilidade = livro.quantidade > 0 ? 'livro__imagens disponivel' : 'livro__imagens indisponivel';
         elementoParaInserirLivros.innerHTML += `
         <div class="livro">
             <img class="${disponibilidade}" src="${livro.imagem}" alt="${livro.alt}" />
